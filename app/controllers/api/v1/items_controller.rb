@@ -1,9 +1,7 @@
 class Api::V1::ItemsController < ApplicationController
 
-
  def index
   items = Item.page params[:page]
-
   render json: {
    resource: items,
    pager: {
@@ -22,5 +20,4 @@ class Api::V1::ItemsController < ApplicationController
    render json: {errors: item.errors}
   end
  end
-
 end
