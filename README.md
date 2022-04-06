@@ -14,4 +14,7 @@ docker start id
 //创建测试数据库
 RAILS_ENV=test bin/rails db:create
 RAILS_ENV=test bin/rails db:migrate
+//运行单元测试
+
+bundle exec rspec
 ```

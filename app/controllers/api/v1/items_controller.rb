@@ -1,5 +1,6 @@
 class Api::V1::ItemsController < ApplicationController
 
+ # 查询所有items
  def index
   items = Item.page params[:page]
   render json: {
@@ -12,8 +13,9 @@ class Api::V1::ItemsController < ApplicationController
   }
  end
 
+ # 新增items
  def create 
-  item = Item.new amount: 1
+  item = Item.new amount: params[:amount]
   if item.save
    render json: {resource: item}
   else
