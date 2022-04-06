@@ -7,6 +7,8 @@ class Api::V1::RecordsController < ApplicationController
 def create
  record = Record.new params.permit(:amount, :category, :notes)
  record.save
+ p ">>>>>>"
+ p record
 end
 
  def render_resources(page)
@@ -15,3 +17,4 @@ end
  end
 
 end
+
