@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       # api/v1
+
+      resources :records
       resources :validte_codes, only: [:create]
       resources :session, only: [:create,:destroy]
       resources :me, only: [:show]
